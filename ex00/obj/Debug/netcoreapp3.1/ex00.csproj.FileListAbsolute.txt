@@ -1,0 +1,12 @@
+/Users/baylak/Piscine_C-sharp/ex00/obj/Debug/netcoreapp3.1/ex00.csprojAssemblyReference.cache
+/Users/baylak/Piscine_C-sharp/ex00/obj/Debug/netcoreapp3.1/ex00.AssemblyInfoInputs.cache
+/Users/baylak/Piscine_C-sharp/ex00/obj/Debug/netcoreapp3.1/ex00.AssemblyInfo.cs
+/Users/baylak/Piscine_C-sharp/ex00/obj/Debug/netcoreapp3.1/ex00.csproj.CoreCompileInputs.cache
+/Users/baylak/Piscine_C-sharp/ex00/bin/Debug/netcoreapp3.1/ex00.deps.json
+/Users/baylak/Piscine_C-sharp/ex00/bin/Debug/netcoreapp3.1/ex00.runtimeconfig.json
+/Users/baylak/Piscine_C-sharp/ex00/bin/Debug/netcoreapp3.1/ex00.runtimeconfig.dev.json
+/Users/baylak/Piscine_C-sharp/ex00/bin/Debug/netcoreapp3.1/ex00.dll
+/Users/baylak/Piscine_C-sharp/ex00/bin/Debug/netcoreapp3.1/ex00.pdb
+/Users/baylak/Piscine_C-sharp/ex00/obj/Debug/netcoreapp3.1/ex00.dll
+/Users/baylak/Piscine_C-sharp/ex00/obj/Debug/netcoreapp3.1/ex00.pdb
+/Users/baylak/Piscine_C-sharp/ex00/obj/Debug/netcoreapp3.1/ex00.genruntimeconfig.cache

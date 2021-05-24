@@ -4,26 +4,38 @@ namespace ex00
 {
     class Program
     {
-		private double rateMonth;
+		private static double i;
 		private double percent;
+		private static double	sumMonth;
 
-		private void DecreaseSum()
+		private static void DecreaseSum(double sum, double rate, int term, int selectedMonth, double payment)
 		{
-
+			var date = new DateTime(DateTime.Now.Year, selectedMonth, 1);
+			for (int i = 0; i < term; i++)
+			{
+				double percent = (sum * rate * date) / 100 * (DateTime.IsLeapYear(DateTime.Now.Year) ? 366 : 365);
+				selectedMonth--;
+				var date1 = new DateTime(DateTime.Now.Year, selectedMonth, 1);
+				date = date - date1;
+				Console.WriteLine("Дата				Платеж			ОД			Проценты			Остаток долга");
+				//Console.WriteLine($"{}				Платеж			ОД			Проценты			Остаток долга");
+			}
 		}
 
-		private void DecreaseTerm()
+		private static void DecreaseTerm()
 		{
-
+			
 		}
 
-		private void CreditMethod(double sum, double rate, int term, int selectedMonth, double payment)
+		private static void CreditMethod(double sum, double rate, int term, int selectedMonth, double payment)
 		{
-			rateMonth = rate / 12 / 100;
-			percent = (sum * rateMonth ) 
+			i = rate / 12 / 100;
+			sumMonth = ((sum) * i * Math.Pow((1 + i), term)) / (Math.Pow((1 + i), term) - 1);
+			Console.Write(sumMonth); 
+			DecreaseSum(sum, rate, term, selectedMonth, payment);
 		}
 	
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             if (args.Length == 5)
 			{

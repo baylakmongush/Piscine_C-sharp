@@ -40,10 +40,10 @@ namespace ex01
 		{
 			int notFound = 0;
 			Console.WriteLine("Enter name:");
-			string name = Console.ReadLine().Trim();
+			string name = Console.ReadLine();
 			if (name == "")
 			{
-				Console.Write("Your name was not found.\n");
+				Console.WriteLine("Your name was not found.");
 				return ;
 			}
 			int i = 0;
@@ -51,10 +51,10 @@ namespace ex01
 			string someName = null;
 			while (j < arrayName.Length)
 			{
-				i = Calculate(name, arrayName[j].Trim());
+				i = Calculate(name, arrayName[j]);
 				if (i == 0)
 				{
-					Console.Write($"Hello, {arrayName[j]}");
+					Console.WriteLine($"Hello, {arrayName[j]}");
 					notFound = 1;
 					break ;
 				}
@@ -66,15 +66,15 @@ namespace ex01
 				j = 0;
 				while (j < arrayName.Length)
 				{
-					i = Calculate(name, arrayName[j].Trim());
+					i = Calculate(name, arrayName[j]);
 					if (i <= 2)
 					{
 						someName = arrayName[j];
-						Console.Write($"Did you mean {someName}? Y/N\n");
-						string answer = Console.ReadLine().Trim();
+						Console.WriteLine($"Did you mean {someName}? Y/N");
+						string answer = Console.ReadLine();
 						if (answer == "Y" || answer == "y")
 						{
-							Console.Write($"Hello, {someName}!\n");
+							Console.WriteLine($"Hello, {someName}!");
 							return ;
 						}
 						else if (answer == "N" || answer == "n")
@@ -84,7 +84,7 @@ namespace ex01
 						}
 						else
 						{
-							Console.Write("Your name was not found.\n");
+							Console.WriteLine("Your name was not found.");
 							return ;
 						}
 					}
@@ -93,19 +93,12 @@ namespace ex01
 			}
 		}
 
-		private static string[]	InitArray(string fileContent)
-		{
-			string[] arrayName = fileContent.Split("\n");
-			Array.Resize(ref arrayName, arrayName.Length - 1);
-			return (arrayName);
-		}
         private static void	Main(string[] args)
         {
             string pathFile = "us.txt";
 			if (File.Exists(pathFile))
 			{
-				string readText = File.ReadAllText(pathFile);
-				string[] arrayName = InitArray(readText);
+				string[] arrayName = File.ReadAllLines(pathFile);
 				Result(arrayName);
 			}
 			else
