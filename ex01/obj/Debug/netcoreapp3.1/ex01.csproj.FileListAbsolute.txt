@@ -1,0 +1,12 @@
+/Users/baylak/Piscine_C-sharp/ex01/bin/Debug/netcoreapp3.1/ex01.deps.json
+/Users/baylak/Piscine_C-sharp/ex01/bin/Debug/netcoreapp3.1/ex01.runtimeconfig.json
+/Users/baylak/Piscine_C-sharp/ex01/bin/Debug/netcoreapp3.1/ex01.runtimeconfig.dev.json
+/Users/baylak/Piscine_C-sharp/ex01/bin/Debug/netcoreapp3.1/ex01.dll
+/Users/baylak/Piscine_C-sharp/ex01/bin/Debug/netcoreapp3.1/ex01.pdb
+/Users/baylak/Piscine_C-sharp/ex01/obj/Debug/netcoreapp3.1/ex01.csprojAssemblyReference.cache
+/Users/baylak/Piscine_C-sharp/ex01/obj/Debug/netcoreapp3.1/ex01.AssemblyInfoInputs.cache
+/Users/baylak/Piscine_C-sharp/ex01/obj/Debug/netcoreapp3.1/ex01.AssemblyInfo.cs
+/Users/baylak/Piscine_C-sharp/ex01/obj/Debug/netcoreapp3.1/ex01.csproj.CoreCompileInputs.cache
+/Users/baylak/Piscine_C-sharp/ex01/obj/Debug/netcoreapp3.1/ex01.dll
+/Users/baylak/Piscine_C-sharp/ex01/obj/Debug/netcoreapp3.1/ex01.pdb
+/Users/baylak/Piscine_C-sharp/ex01/obj/Debug/netcoreapp3.1/ex01.genruntimeconfig.cache
