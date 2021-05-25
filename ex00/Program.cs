@@ -8,31 +8,32 @@ namespace ex00
 		private double percent;
 		private static double	sumMonth;
 
-		private static void DecreaseSum(double sum, double rate, int term, int selectedMonth, double payment)
+		private static void DecreaseTerm(double sum, double rate, int term, int selectedMonth, double payment)
 		{
+			double max = sum;
+			double summa = sum;
 			var date = new DateTime(DateTime.Now.Year, selectedMonth, 1);
-			for (int i = 0; i < term; i++)
+			i = rate / 12 / 100;
+			Console.WriteLine("Дата		Платеж		ОД		Проценты	Остаток долга\n");
+			for (int ind = 0; ind < 9; ind++)
 			{
-				double percent = (sum * rate * date) / 100 * (DateTime.IsLeapYear(DateTime.Now.Year) ? 366 : 365);
-				selectedMonth--;
-				var date1 = new DateTime(DateTime.Now.Year, selectedMonth, 1);
-				date = date - date1;
-				Console.WriteLine("Дата				Платеж			ОД			Проценты			Остаток долга");
-				//Console.WriteLine($"{}				Платеж			ОД			Проценты			Остаток долга");
+				sumMonth = ((summa) * i * Math.Pow((1 + i), term)) / (Math.Pow((1 + i), term) - 1);
+				var nextDate = date.AddMonths(1);
+				double percent = (sum * rate * (nextDate - date).TotalDays) / (100 * (DateTime.IsLeapYear(date.Year) ? 366 : 365));
+				max = sumMonth - percent;
+				sum = sum - max;
+				if (ind == (selectedMonth - 1))
+				{
+					sum -= payment;
+				}
+				string formatted = date.ToString("dd'.'MM'.'yyyy");
+				Console.WriteLine($"{formatted}	{sumMonth:0.00} р.	{max:0.00} р.	{percent:0.00} р.	{sum:0.00} р.");
+				date = nextDate;
 			}
 		}
-
-		private static void DecreaseTerm()
-		{
-			
-		}
-
 		private static void CreditMethod(double sum, double rate, int term, int selectedMonth, double payment)
 		{
-			i = rate / 12 / 100;
-			sumMonth = ((sum) * i * Math.Pow((1 + i), term)) / (Math.Pow((1 + i), term) - 1);
-			Console.Write(sumMonth); 
-			DecreaseSum(sum, rate, term, selectedMonth, payment);
+			DecreaseTerm(sum, rate, term, selectedMonth, payment);
 		}
 	
         private static void Main(string[] args)
